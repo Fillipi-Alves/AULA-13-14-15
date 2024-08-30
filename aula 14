@@ -1,0 +1,544 @@
+# # AULA 14 -  Match Case
+
+# Match case
+# While
+
+# # ESTRUTURAS DE REPETIÇÃOOR E WHILE
+
+# As estruturas de repetição, também conhecidas como loops, são elementos cruciais na programação, permitindo que um conjunto de instruções seja executado repetidamente com base em uma condição específica. Em Python, uma linguagem de programação amplamente utilizada em diversas áreas, as estruturas de repetição são uma parte fundamental da sua sintaxe e são frequentemente empregadas para automatizar tarefas, processar dados, e resolver problemas complexos de maneira eficiente.
+
+# Neste texto, exploraremos as principais estruturas de repetição em Python, como o loop "for" e o loop "while", e discutiremos como eles são usados para criar programas mais dinâmicos e flexíveis. Vamos mergulhar no mundo das estruturas de repetição em Python e descobrir como elas podem ser uma ferramenta poderosa para desenvolvedores que desejam criar software eficiente e eficaz.
+
+# # `SINTAXE DO while FOR`
+
+# # `while  isso`
+
+#                  `FAÇA ISSO`
+
+# Em Python, o while é uma estrutura de repetição que permite executar um bloco de código repetidamente enquanto uma condição específica for verdadeira. O código continuará a ser executado até que a condição seja avaliada como falsa. É importante garantir que a condição possa ser eventualmente falsa para evitar loops infinitos.
+
+# WHILE CONDIÇÃO:
+
+#  `#Código a ser repetido enquanto a condição for verdadeira`
+
+# EXEMPLOS DA UTILIZAÇÃO DO WHILE: 
+
+# ```python
+# contador = 1
+# while contador <= 5:
+#      print("Número:", contador)
+#      contador += 1
+# ```
+
+# Neste exemplo:
+
+# - Inicializamos uma variável **`contador`** com o valor 1.
+# - O loop **`while`** é configurado para continuar enquanto **`contador`** for menor ou igual a 5.
+# - Dentro do loop, imprimimos o valor atual de **`contador`** e, em seguida, incrementamos **`contador`** em 1.
+# - O loop continuará a ser executado até que **`contador`** seja igual a 6, momento em que a condição se tornará falsa, e o loop terminará.
+
+# ```python
+# #sistema de senha:
+
+# senha_correta = 12
+# chances = 3
+
+# while chances > 0:
+#       senha = input("Digite a senha ->")      
+#       if senha == senha_correta:       
+#       print("Acesso liberado")
+# else:
+#     chances -=1
+#     print("Tente novamente")
+
+# if chances == 0:
+#    print("Chances esgotadas")         
+       
+# ```
+
+# WHILE É DIVIDIDO EM 3 PARTES:
+
+# - **CONTADOR**
+# - **A CONDIÇÃO PARA EXCUÇÃO DO LOOP**
+# - **INCREMENTO DA VARIÁVEL**
+
+# DIFERENÇA DO WHILE PARA O LOOP FOR 
+
+# for n in range(1,2):
+
+# faça isso 
+
+# while x :
+
+# faça isso 
+
+# [Jogo e restaurante](https://www.notion.so/Jogo-e-restaurante-0c3b6277b98c4cbf8746d14baa401b13?pvs=21)
+
+# Desafio Restaurante:
+
+# **Utilize o while para criar um restaurante** 
+
+# O usuário tem a opção de mudar de opção
+
+# ```
+# Você é um(a) desenvolvedor(a) Freenlance, e seu cliente solicita
+# a criação de um sistema: 
+
+# # Restaurante
+# # Bebidas -  Coca |  água |  Suco 
+# # Alimentos -  Feijoada | Carne de Jaca | Pizza
+# # Sugestão de utilização:
+ 
+# lista  =  []
+# n1= input('digite:')
+# n2= input('digite:')
+# lista += (n1, n2)
+# print(lista)
+
+# lista = []
+# quant = int(input('>>'))
+# if quant == 3:
+#    p1, p2, p3 =  input(), input(), input()
+#    lista += (p1, p2, p3) 
+# if quant == 4:
+#    p1, p2, p3, p4 =  input(), input(), input(),  input() 
+#    lista += (p1, p2, p3, p4)  
+# if quant == 5:
+#    p1, p2, p3, p4, p5 =  input(), input(), input(),  input(), input()      
+#    lista += (p1, p2, p3, p4, p5)
+# print(lista)
+# ```
+# Resolução
+# def menu_restaurante():
+#     print(f'''
+#     Digite o ID do produto: 
+#     # Bebidas -  Coca(1) |  água(2) |  Suco(3) 
+#     # Alimentos -  Feijoada(4) | Carne de Jaca(5) | Pizza(6)
+    
+#     ''')
+
+
+# def fazer_pedido():
+#     menu_restaurante()
+#     produtos = ['Coca(1)','água(2)','Suco(3)', 'Feijoada(4)', 'Carne de Jaca(5)', 'Pizza(6)' ]
+#     valores_produtos = [50,10,20, 15,30, 50] 
+#     meus_produtos = []
+#     valores =  []
+#     fazer2_pedido = input('+ produtos? s | n')
+#     while fazer2_pedido == 's' :
+#           p1 = int(input('Digite o ID'))
+#           produto1 = produtos[p1]
+#           valores.append(valores_produtos[p1])
+#           meus_produtos.append(produto1)
+#           print(meus_produtos,'R$', valores)
+#           print('total R$',sum(valores))
+#           fazer2_pedido = input('+ produtos - s|n')
+    
+       
+#     else: 
+#           print('Vamos para o pagamento') 
+#           print('1 pix, 2 Débito, 3 Crédito' )
+#           pag = int(input('>>'))
+#           print('Forma de pagamento efetuada ', pag)
+    
+# [Resolução](https://www.notion.so/Resolu-o-70cfa791a35f4e189fb6fd8a113a2215?pvs=21)
+
+# # **Match Case**
+
+# Semelhante as condicionais o Match Case, faz o computador fazer escolhas.
+
+# Conhecido também como Strutural Pattern Matching. Estrutura Padrão 
+
+# Correspondente.
+
+# ```jsx
+# exemplo 1
+
+# n = 10
+# if n == 0:
+#    print("é maior")
+# else:
+#    print('Menor')
+
+# n = 0
+# match n:
+#     case 0:
+#         print("é zero")
+#     case _:
+#         print("Menor ou maior")
+
+# exemplo 2
+
+# a  = 20
+# b  = 30
+# match a,b:
+#     case 0:
+#         print('É zero')
+#     case 20:
+#         print('é 20')
+#     case _:
+#          print('Não é nada')
+
+# 2.b 
+
+# a  = int(input())
+# b  = int(input())
+# match a,b:
+#     case 0 , 1:
+#         print('Acesso ok')
+#     case _:
+#         print('Tente novamente')
+
+# exemplo 3
+
+# Com funções:
+# Se no if temos Isso:
+
+# def check_with_if(value):
+#     if isinstance(value, str):
+#         print("É uma string")
+#     elif isinstance(value, int):
+#         print("É um inteiro")
+#     elif isinstance(value, float):
+#         print("É um número de ponto flutuante")
+#     else:
+#         print("Tipo não reconhecido")
+
+# check_type_with_if("Olá")  # Saída: É uma string
+# check_type_with_if(42)      # Saída: É um inteiro
+# check_type_with_if(3.14)    # Saída: É um número de ponto flutuante
+
+# Com Match Case:
+
+# def check_with_match(value):
+#     match value:
+#         case str():
+#             print("É uma string")
+#         case int():
+#             print("É um inteiro")
+#         case float():
+#             print("É um número de ponto flutuante")
+#         case bool():
+#             print("É um número de boleano")   
+#         case _:
+#             print("Desconhecido")
+
+# check_type_with_match("Olá")  # Saída: É uma string
+# check_type_with_match(42)     # Saída: É um inteiro
+# check_type_with_match(3.14)   # Saída: É um número de ponto flutuante
+
+# exemplo 4:
+
+# num = int(input())
+
+# match num:
+#     case 0:
+#         print ("Zero")
+#     case x if x > 0:
+#         print ("Positivo")
+#     case _:
+#         print ("Negativo")
+
+# ```
+
+# EXERCÍCIOS: 
+
+# 1: Verificando se o número é par ou ímpar
+
+# 2: Verificando se um número é positivo, negativo ou zero
+
+# 3: Verificando se uma string é vazia ou não
+
+# 4: Verificando se um número é maior, menor ou igual a 10
+
+# 5: Classificando uma idade em faixas etárias
+
+# [Resolução](https://www.notion.so/Resolu-o-c90b87d4f1704cc99655ab6232cfabff?pvs=21)
+
+# Desafio: Jogo→  Adivinhe o número com while
+
+# # **Conjuntos**
+
+# Quando Usar Conjuntos?
+# Quando você precisa armazenar elementos únicos.
+# Quando você precisa realizar operações de conjuntos, como união, interseção ou diferença.
+# Para remover duplicatas de uma lista ou sequência.
+
+# ```python
+# conjunto1 = {1, 2, 3, 4}
+# conjunto2 = {3, 4, 5, 6}
+
+# # União
+# uniao = conjunto1 | conjunto2  # ou conjunto1.union(conjunto2)
+# print(uniao)  # Saída: {1, 2, 3, 4, 5, 6}
+
+# # Interseção
+# intersecao = conjunto1 & conjunto2  
+# # ou conjunto1.intersection(conjunto2)
+# print(intersecao)  # Saída: {3, 4}
+
+# # Diferença
+# diferenca = conjunto1 - conjunto2  
+# # ou conjunto1.difference(conjunto2)
+# print(diferenca)  # Saída: {1, 2}
+
+# # Diferença simétrica
+# dif_simetrica = conjunto1 ^ conjunto2  
+# # ou conjunto1.symmetric_difference(conjunto2)
+# print(dif_simetrica)  # Saída: {1, 2, 5, 6}
+
+# # Verificar subconjunto
+# print({1, 2}.issubset(conjunto1))  # Saída: True
+# print(conjunto1.issuperset({1, 2}))  # Saída: True
+
+# # Criando um conjunto com chaves {}
+# conjunto1 = {1, 2, 3, 4, 5}
+# print(conjunto1)  # Saída: {1, 2, 3, 4, 5}
+
+# # Criando um conjunto com a função set()
+# conjunto2 = set([1, 2, 3, 4, 5])
+# print(conjunto2)  # Saída: {1, 2, 3, 4, 5}
+
+# Adicionando Elementos
+# Para adicionar elementos a um conjunto, utilize o método add().
+
+# conjunto = {1, 2, 3}
+# conjunto.add(4)
+# print(conjunto)  # Saída: {1, 2, 3, 4}
+
+# Removendo Elementos
+# Para remover um elemento de um conjunto, utilize os métodos 
+# remove() ou discard(). A diferença entre eles é que remove() 
+# gera um erro se o elemento não estiver presente no conjunto, 
+# enquanto discard() não gera erro.
+
+# conjunto = {1, 2, 3, 4}
+# conjunto.remove(3)
+# print(conjunto)  # Saída: {1, 2, 4}
+
+# conjunto.discard(2)
+# print(conjunto)  # Saída: {1, 4}
+
+# conjunto.discard(5)  # Não gera erro se o elemento não existir
+# print(conjunto)  # Saída: {1, 4}
+
+# # EXEMPLOS: 
+
+# conjunto1 = {1,2,3,6,5,25,15}
+# conjunto2 = {1,2,3,6,5,5,5,5}
+# print(conjunto1.union(conjunto2))
+# print(conjunto1.intersection(conjunto2))
+# print('Diferença', conjunto2 ^ conjunto1)
+# print('Diferença ',conjunto1.difference(conjunto2))
+# print('Diferença ',conjunto1 - conjunto2)
+# print({1,3,22}.issubset(conjunto1))
+
+# conjunto1.discard(1)
+# conjunto1.add(100)
+# conjunto1.remove(6)
+# print(conjunto1)
+
+# ```
+
+# ## Dicionário
+
+# Dicionarios em python
+
+# Em Python, um dicionário é uma estrutura de dados poderosa e flexível que permite armazenar pares chave-valor. Eles são uma das estruturas de dados fundamentais em Python e são amplamente utilizados devido à sua eficiência e versatilidade.
+
+# Características dos Dicionários:
+
+# 1. Associatividade de Chave-Valor: Cada elemento em um dicionário é representado por um par chave-valor. A chave é usada para acessar e recuperar o valor correspondente. Isso permite uma recuperação rápida de valores com base em uma chave específica, sem a necessidade de iterar sobre toda a estrutura de dados.
+# 2. Mutabilidade: Dicionários em Python são mutáveis, o que significa que você pode adicionar, modificar ou remover pares chave-valor após sua criação.
+# 3. Chaves Únicas: As chaves em um dicionário são únicas. Isso significa que não pode haver duas chaves idênticas em um mesmo dicionário. No entanto, os valores podem ser repetidos.
+# 4. Heterogeneidade: Os valores em um dicionário podem ser de qualquer tipo de dado, incluindo tipos de dados embutidos do Python, como inteiros, strings, listas, tuplas e até mesmo outros dicionários.
+# 5. Desordem: Antes do Python 3.7, os dicionários não mantinham uma ordem específica dos elementos. A partir do Python 3.7, a implementação padrão dos dicionários mantém a ordem de inserção dos elementos. Isso significa que a ordem em que os pares chave-valor são inseridos é preservada ao iterar sobre o dicionário.
+
+# Uso de Dicionários:
+
+# - Recuperação Eficiente de Dados: A capacidade de recuperar rapidamente valores com base em chaves torna os dicionários eficientes para a implementação de mapeamentos entre informações.
+# - Configurações e Opções: Dicionários são frequentemente usados para armazenar configurações de aplicativos, opções de usuário e outras informações relacionadas a preferências.
+# - Análise de Dados: Em muitos casos, dicionários são úteis para representar dados estruturados, onde cada elemento pode ser identificado por uma chave única.
+# - Armazenamento de Dados em Cache: Dicionários são úteis para armazenar dados temporários em cache, especialmente quando os dados precisam ser acessados com frequência e de forma eficiente.
+
+# Exemplo:
+
+# # Criando um dicionário de informações de um usuário
+
+# usuario = {
+# 'nome': 'João',
+# 'idade': 30,
+# 'cidade': 'São Paulo',
+# 'email': 'joao@example.com'
+# }
+
+# # Acessando valores no dicionário
+
+# print(usuario['nome'])  # Saída: João
+# print(usuario['idade'])  # Saída: 30
+
+# Em resumo, os dicionários em Python são uma ferramenta valiosa para armazenar e manipular dados de forma eficiente, fornecendo uma maneira flexível de associar informações através de chaves exclusivas.
+
+# documentação 
+
+# [https://docs.python.org/3/tutorial/datastructures.html](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+
+# ```python
+# Exemplos Básicos:
+
+# #Criando um dicionário vazio:
+
+# meu_dicionario = {}
+# dic = dict{}
+
+# #Criando um dicionário com alguns valores:
+
+# meu_dicionario = {'a': 1, 'b': 2, 'c': 3}
+
+# #Acessando valores usando chaves:
+
+# print(meu_dicionario['a'])  # Saída: 1
+
+# #Adicionando um novo par chave-valor:
+
+# meu_dicionario['d'] = 4
+# print(meu_dicionario)  # Saída: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+# #Removendo um par chave-valor:
+
+# del meu_dicionario['a']
+# print(meu_dicionario)  # Saída: {'b': 2, 'c': 3, 'd': 4}
+
+# Principais Métodos:
+
+# #`keys()`: Retorna uma lista contendo todas as chaves do dicionário.
+
+# print(meu_dicionario.keys())  # Saída: dict_keys(['b', 'c', 'd'])
+
+# #`values()`: Retorna uma lista contendo todos os valores do dicionário.
+
+# print(meu_dicionario.values())  # Saída: dict_values([2, 3, 4])
+
+# #`items()`: Retorna uma lista contendo tuplas de chave-valor.
+
+# print(meu_dicionario.items())  
+# # Saída: dict_items([('b', 2), ('c', 3), ('d', 4)])
+
+# #`get()`: Retorna o valor associado à 
+# chave especificada.
+
+# print(meu_dicionario.get('b'))  # Saída: 2
+
+# #`pop()`: Remove e retorna o valor 
+# associado à chave especificada.
+
+# valor = meu_dicionario.pop('c')
+# print(valor)  # Saída: 3
+# print(meu_dicionario)  # Saída: {'b': 2, 'd': 4}
+
+# #`clear()`: Remove todos os itens do dicionário.
+
+# meu_dicionario.clear()
+# print(meu_dicionario)  # Saída: {}
+
+# ```
+
+# ## Desafio 1
+
+# Crie um e-commerce com a estrutura de dicionários.
+
+# Produtos:  Livros, tablets e fones de ouvido
+
+# As funções: 
+
+# Comprar()
+
+# Pagar()
+
+# mostra o valor da compra 
+
+# [Resolução ](https://www.notion.so/Resolu-o-2a3d9cdaecc44aacaff3f2bea72e2b5b?pvs=21)
+             
+
+
+
+
+
+# Jogo e restaurante
+# import random
+
+
+
+# # Restaurante
+# # Bebidas -  Coca |  água |  Suco 
+# # Alimentos -  Feijoada | Carne de Jaca | Pizza  
+
+# def jogo_de_adivinhacao():
+#        chances = 3
+       
+#        while chances >= 1:
+#             chances -= 1
+#             aleatoria = random.randint(1,11)
+#             chute = int(input('>>'))
+#             if  aleatoria == chute:
+#                 print('Acerto! O número é ->', aleatoria)
+#                 break
+#             else:
+#                 print('Perdeu o jogo, o número  é ->', aleatoria)
+#                 print('Essa é a chance nº', chances+1)    
+
+
+
+
+
+# display()
+# jogo_de_adivinhacao()
+
+
+# def display():
+#     print('Jogo de adivinhação!')
+#     print('Você possui apenas 3 chances')
+
+# ................................................
+
+
+# # opcao_prato = 0
+# # opcao_bebida = 0
+
+# # def menu(): 
+# #     quat_opcao = 2
+# #     while quat_opcao>0:
+# #          opcao_prato = int(input('Digite do seu prato'))
+# #          if opcao_prato == 1 or opcao_prato == 2 or opcao_prato == 3:
+# #              print('Excelente! Parabéns pela escolha')
+# #              break
+# #          else:
+# #              print('Tente novamente')  
+
+# # def bebidas(): 
+# #     quat_opcao = 2
+# #     while quat_opcao>0:
+# #          opcao_bebida = int(input('Digite o número da sua bebida'))
+# #          if opcao_bebida == 1 or opcao_bebida == 2 or opcao_bebida == 3:
+# #              print('Excelente! Parabens pela encolha')
+# #              print('Excelente você escolheu', opcao_prato, opcao_bebida)
+# #              break
+# #          else:
+# #              print('Tente novamente')  
+
+
+# # def display(): 
+# #     print('''
+# #     Escolha seu prato: 
+# #     1 - Pizza
+# #     2 - Carne de Jaca 
+# #     3 - Feijoada
+# #     Escolha sua bebida: 
+# #     1 - Água 
+# #     2 - Coaca- cola 
+# #     3 - Suco  
+# #     ''')           
+              
+# # display()
+# # menu()
+# # bebidas()

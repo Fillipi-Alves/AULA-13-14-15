@@ -1,0 +1,47 @@
+# **Exercício 1: Criar e ler um Arquivo**
+# import os 
+# import shutil
+
+
+
+# with open('arquivo.txt', 'w') as arquivo:
+#      c =  arquivo.write()
+#      print('feito')
+     
+
+
+
+# **Exemplo 2: Entrar em um Diretório**
+
+
+# with open('C:/Users/aluno/aula11/arquivo.txt', 'r') as arquivo:
+#      c1 =  arquivo.read()
+#      print(c1)
+
+
+# with os.scandir('C:/Users/aluno/aula11/teste1') as teste:
+#     for n in teste:
+#         if n.is_file():
+#             print(n)
+
+
+
+# **Exercício 3: Renomear um Diretório**
+
+# os.rename('teste1', 'test3')
+
+# **Exercício 4: Remover um Diretório**
+
+# shutil.rmtree('C:/Users/aluno/aula11/test3')
+
+# **Exercício 5: Listar Arquivos em um Diretório** 
+# with os.scandir('C:/Users/aluno/aula11/teste2') as teste:
+#     for n in teste:
+#         if n.is_file():
+#             print(n)
+
+# **Exercício 6: Copiar Arquivos em um Diretório**
+            
+# shutil.copy('teste2/teste2.txt','teste5.txt')            
+
+
